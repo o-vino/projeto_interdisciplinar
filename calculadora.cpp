@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <locale.h>
+#include <stdlib.h>
 
+int escolha = 0;
 float n1 = 0;
 float n2 = 0;
 float res = 0;
@@ -8,7 +10,10 @@ float res = 0;
 int oper = 0;
 
 main(){
+do{    
     setlocale(LC_ALL, "");
+
+    oper = 0;
 
     printf("\nInforme o primeiro valor: ");
     scanf("%f", &n1);
@@ -38,4 +43,9 @@ main(){
     }
 
     printf("\nO resultado é: %.2f",res);
+
+printf("\nDeseja fazer outro cálculo? \n Sim = 1 \n Não = 0\n");
+scanf("%d", &escolha);
+system("clear");
+}while(escolha != 0);
 }
