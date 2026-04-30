@@ -29,6 +29,8 @@ do{
         }
     }while(oper < 1 || oper > 4);
 
+    //if-else em cadeia para seleção de operações
+
     if(oper == 1){
         res = n1 + n2;
     }else
