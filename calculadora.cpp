@@ -5,6 +5,8 @@ float n1 = 0;
 float n2 = 0;
 float res = 0;
 
+int oper = 0;
+
 main(){
     setlocale(LC_ALL, "");
 
@@ -14,7 +16,26 @@ main(){
     printf("\nInforme o segundo valor: ");
     scanf("%f", &n2);
 
-    res = n1 + n2;
+    do{
+    printf("\nInforme qual a operação que desejas fazer:\n soma          = 1\n subtração     = 2\n multiplicação = 3\n divisão       = 4\n");
+    scanf("%d", &oper);
+        if(oper < 1 || oper > 4){
+            printf("Informe uma operação válida! ");
+        }
+    }while(oper < 1 || oper > 4);
+
+    if(oper == 1){
+        res = n1 + n2;
+    }else
+    if(oper == 2){
+        res = n1 - n2;
+    }else
+    if(oper == 3){
+        res = n1 * n2;
+    }else
+    if(oper == 4){
+        res = n1 / n2;
+    }
 
     printf("\nO resultado é: %.2f",res);
 }
